@@ -40,10 +40,10 @@ class ApplicationController < Sinatra::Base
   get '/login' do
     # binding.pry
     if logged_in?
-      binding.pry
+      # binding.pry
       redirect '/tweets'
     else
-      binding.pry
+      # binding.pry
       erb :"/users/login"
     end
   end
@@ -64,7 +64,7 @@ class ApplicationController < Sinatra::Base
 
   get '/logout' do
     session.clear
-    binding.pry
+    # binding.pry
     redirect '/login'
   end
 
