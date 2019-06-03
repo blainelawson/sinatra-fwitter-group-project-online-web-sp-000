@@ -40,6 +40,7 @@ class ApplicationController < Sinatra::Base
   get '/login' do
     # binding.pry
     if logged_in?
+      binding.pry
       redirect '/tweets'
     else
       erb :"/users/login"
