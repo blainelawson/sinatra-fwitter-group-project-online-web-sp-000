@@ -21,7 +21,7 @@ class TweetsController < ApplicationController
 
 
   post '/tweets' do
-
+    binding.pry
   end
 
   get '/tweets/:id' do
