@@ -62,7 +62,7 @@ class ApplicationController < Sinatra::Base
 
   get '/logout' do
     session.clear
-    binding.pry
+    # binding.pry
     redirect '/login'
   end
 
