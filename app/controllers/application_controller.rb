@@ -43,6 +43,7 @@ class ApplicationController < Sinatra::Base
       binding.pry
       redirect '/tweets'
     else
+      binding.pry
       erb :"/users/login"
     end
   end
