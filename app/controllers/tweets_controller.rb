@@ -50,7 +50,7 @@ class TweetsController < ApplicationController
   patch '/tweets/:id' do
     binding.pry
     @tweet = Tweet.find_by_id(params[:id])
-    @tweet.update(params[:content])
+    @tweet.update(content: params[:content])
   end
 
   delete '/tweets/:id/delete' do
