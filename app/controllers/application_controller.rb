@@ -38,28 +38,21 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/login' do
-    # binding.pry
     if logged_in?
-      # binding.pry
       redirect '/tweets'
     else
-      # binding.pry
       erb :"/users/login"
     end
   end
 
   post '/login' do
-    # binding.pry
     @user = User.find_by(username: params[:username])
-# binding.pry
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      # binding.pry
       redirect '/tweets'
     else
       redirect '/login'
     end
-    # binding.pry
   end
 
   get '/logout' do
