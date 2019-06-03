@@ -22,6 +22,7 @@ class TweetsController < ApplicationController
 
   post '/tweets' do
     binding.pry
+    current_user.tweets = Tweet.create(params)
   end
 
   get '/tweets/:id' do
